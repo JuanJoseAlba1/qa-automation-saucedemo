@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Resultados de pytest y Playwright
+.pytest_cache/
+test-results/
+
+# Editores
+.vscode/
+.idea/
