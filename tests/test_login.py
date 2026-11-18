@@ -54,3 +54,14 @@ def test_login_usuario_vacio(pagina_login):
 
     # VERIFICAR: debe aparecer el mensaje de error
     expect(page.locator('[data-test="error"]')).to_contain_text("Epic sadface: Username is required")
+
+
+def test_login_password_vacia(pagina_login):
+    page = pagina_login
+
+    # ACTUAR: escribimos solo el usuario y pulsamos Login
+    page.locator('[data-test="username"]').fill(USUARIO_VALIDO)
+    page.get_by_role("button", name="Login").click()
+
+    # VERIFICAR: debe aparecer el error de contraseña
+    expect(page.locator('[data-test="error"]')).to_contain_text("Epic sadface: Password is required")

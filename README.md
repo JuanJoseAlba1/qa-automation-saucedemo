@@ -10,6 +10,8 @@ sobre [SauceDemo](https://www.saucedemo.com), una tienda online creada para prac
 | `test_login.py` | Login exitoso | Se llega a la página de productos |
 | `test_login.py` | Login con contraseña incorrecta | Aparece un mensaje de error |
 | `test_login.py` | Login con usuario bloqueado | Aparece el mensaje "locked out" |
+| `test_login.py` | Login con usuario vacío | Aparece el mensaje "Username is required" |
+| `test_login.py` | Login con contraseña vacía | Aparece el mensaje "Password is required" |
 | `test_carrito.py` | Agregar un producto al carrito | El contador del carrito muestra 1 |
 | `test_carrito.py` | Eliminar un producto del carrito | El contador del carrito desaparece |
 | `test_carrito.py` | Ordenar productos por precio (menor a mayor) | Los precios quedan en orden ascendente |
