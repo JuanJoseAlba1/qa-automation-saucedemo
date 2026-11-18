@@ -42,3 +42,15 @@ def test_login_usuario_bloqueado(pagina_login):
     page.locator('[data-test="login-button"]').click()
 
     expect(page.locator('[data-test="error"]')).to_contain_text("locked out")
+
+
+
+def test_login_usuario_vacio(pagina_login):
+    page = pagina_login
+
+     # ACTUAR: no escribimos nada en el usuario, solo en la contraseña
+    page.locator('[data-test="password"]').fill(PASSWORD_VALIDA)
+    page.locator('[data-test="login-button"]').click()
+
+    # VERIFICAR: debe aparecer el mensaje de error
+    expect(page.locator('[data-test="error"]')).to_contain_text("Epic sadface: Username is required")
